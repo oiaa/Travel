@@ -2,7 +2,7 @@
     <div>
         <div class="title">热销推荐</div>
         <ul>
-            <li class="item border-bottom" v-for="(item, index) of recommendList" :key="item.id">
+            <li class="item border-bottom" v-for="(item, index) of list" :key="item.id">
                 <img :src="item.imgUrl" class="item-img">
                 <div class="item-info">
                     <p class="item-title">{{item.title}}</p>
@@ -17,26 +17,29 @@
 <script>
 export default {
     name: 'HomeRecommend',
-    data() {
-        return {
-            recommendList: [{
-                id: '0001',
-                imgUrl: 'http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_200x200_1bc99086.jpg',
-                title: '故宫',
-                desc: '故宫故宫故宫故宫故宫故宫故宫故宫'
-            }, {
-                id: '0002',
-                imgUrl: 'http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_200x200_1bc99086.jpg',
-                title: '故宫',
-                desc: '故宫故宫故宫故宫故宫故宫故宫故宫'
-            }, {
-                id: '0003',
-                imgUrl: 'http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_200x200_1bc99086.jpg',
-                title: '故宫',
-                desc: '故宫故宫故宫故宫故宫故宫故宫故宫'
-            },]
-        }
+    props: {
+        list: Array
     },
+    // data() {
+    //     return {
+    //         recommendList: [{
+    //             id: '0001',
+    //             imgUrl: 'http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_200x200_1bc99086.jpg',
+    //             title: '故宫',
+    //             desc: '故宫故宫故宫故宫故宫故宫故宫故宫'
+    //         }, {
+    //             id: '0002',
+    //             imgUrl: 'http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_200x200_1bc99086.jpg',
+    //             title: '故宫',
+    //             desc: '故宫故宫故宫故宫故宫故宫故宫故宫'
+    //         }, {
+    //             id: '0003',
+    //             imgUrl: 'http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_200x200_1bc99086.jpg',
+    //             title: '故宫',
+    //             desc: '故宫故宫故宫故宫故宫故宫故宫故宫'
+    //         },]
+    //     }
+    // },
 }
 </script>
 
